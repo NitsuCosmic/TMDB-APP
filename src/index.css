@@ -6,14 +6,14 @@
 }
 
 @theme {
-	--color-primary: #14213d; /* Dark Navy/Charcoal - Main background */
-	--color-secondary: #fca311; /* Amber - Accent color for highlights */
-	--color-accent: #e5e5e5; /* Light Gray - Text color for readability */
-	--color-neutral: #ffffff; /* White - Used for key text/elements */
-	--color-base: #000000; /* Black - Darkest backgrounds/accents */
-	--color-alert: #f44336; /* Red - Error messages, important alerts */
-	--color-warning: #ff9800; /* Orange - Warnings, cautions */
-	--color-danger: #d32f2f; /* Darker Red - Critical errors, deletion actions */
-	--color-success: #4caf50; /* Green - Success messages, confirmations */
-	--color-info: #2196f3; /* Blue - Information, helpful tips */
+	--color-background: #0d1a26ff; /* Dark Background */
+	--color-surface: #1a2a3cff; /* Card/Surface Background */
+	--color-primary: #3490dcff; /* Primary Blue (buttons, highlights) */
+	--color-secondary: hsl(211, 99%, 50%); /* Lighter Blue for hover/secondary */
+	--color-text-primary: #ffffffff; /* White Text */
+	--color-text-secondary: #a0aec0ff; /* Gray Text */
+	--color-accent: #f6ad55ff; /* Orange/Gold (rating badges) */
+	--color-border: #4a5568ff; /* Subtle border color */
+	--color-overlay: rgba(0, 0, 0, 0.5); /* Dark overlay */
+	--color-red-accent: #e53e3e; /* Red for errors or critical elements */
 }

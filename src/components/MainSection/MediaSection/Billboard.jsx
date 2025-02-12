@@ -7,7 +7,7 @@ export const Billboard = ({ data }) => {
 				Discover Movies and Series for You
 			</h3>
 			{data ? (
-				<div className="grid gap-3 grid-cols-[repeat(auto-fill,minmax(12rem,1fr))] lg:grid-cols-[repeat(auto-fill,minmax(14rem,1fr))] 2xl:grid-cols-[repeat(auto-fill,minmax(16rem,1fr))]">
+				<div className="grid gap-3 grid-cols-[repeat(auto-fill,minmax(10rem,1fr))] lg:grid-cols-[repeat(auto-fill,minmax(12rem,1fr))] 2xl:grid-cols-[repeat(auto-fill,minmax(14rem,1fr))]">
 					{data.map((result) => (
 						<MediaCard key={result.id} data={result} />
 					))}

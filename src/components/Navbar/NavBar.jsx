@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 export const NavBar = () => {
 	return (
 		<header>
-			<nav className="flex justify-between items-center p-2 w-full max-w-screen-[1920px] mx-auto text-white">
+			<nav className="flex justify-between items-center p-2 w-full max-w-[1920px] mx-auto text-white">
 				<div className="flex items-center gap-4 md:gap-6">
 					<a href="#">
 						<FontAwesomeIcon icon={faSpotify} size="2xl" width={28} />
