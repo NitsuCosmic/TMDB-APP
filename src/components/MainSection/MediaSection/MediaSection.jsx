@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Billboard } from "./Billboard";
+import { FeaturedMedia } from "./FeaturedMedia/FeaturedMedia";
 
 const API_KEY = import.meta.env.VITE_API_KEY;
 const options = {
@@ -12,6 +13,7 @@ const options = {
 
 export const MediaSection = () => {
 	const [data, setData] = useState(null);
+	const [currentMediaIndex, setCurrentMediaIndex] = useState(0);
 
 	const getData = async () => {
 		try {
@@ -32,8 +34,25 @@ export const MediaSection = () => {
 		getData();
 	}, []);
 
+	useEffect(() => {
+		if (data && data.results) {
+			const intervalId = setInterval(() => {
+				setCurrentMediaIndex(
+					(prevIndex) => (prevIndex + 1) % data.results.length
+				);
+			}, 10000); // 10 seconds
+
+			return () => clearInterval(intervalId);
+		}
+	}, [data]);
+
+	const featuredMedia = data?.results?.[currentMediaIndex]; // Safely access the current media
+
 	return (
 		<div className="w-full flex flex-col gap-4">
+			{data && (
+				<FeaturedMedia featuredMedia={featuredMedia} mediaList={data.results} />
+			)}
 			{data && <Billboard data={data.results} />}
 		</div>
 	);

@@ -3,7 +3,7 @@ export const SidebarItem = ({ title }) => {
 		<li className="font-medium">
 			<a
 				href="#"
-				className="w-full text-neutral-300 hover:text-accent transition-colors"
+				className="w-full text-neutral-300 hover:text-secondary transition-colors"
 			>
 				{title}
 			</a>

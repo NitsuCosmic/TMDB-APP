@@ -6,14 +6,14 @@
 }
 
 @theme {
-	--color-primary: #005f73ff; /* Midnight Green */
-	--color-secondary: #e9d8a6ff; /* Vanilla */
-	--color-accent: #ee9b00ff; /* Gamboge */
-	--color-neutral: #94d2bdff; /* Tiffany Blue */
-	--color-base: #001219ff; /* Rich Black */
-	--color-alert: #ca6702ff; /* Alloy Orange */
-	--color-warning: #bb3e03ff; /* Rust */
-	--color-danger: #ae2012ff; /* Rufous */
-	--color-success: #0a9396ff; /* Dark Cyan */
-	--color-info: #9b2226ff; /* Auburn */
+	--color-primary: #14213d; /* Dark Navy/Charcoal - Main background */
+	--color-secondary: #fca311; /* Amber - Accent color for highlights */
+	--color-accent: #e5e5e5; /* Light Gray - Text color for readability */
+	--color-neutral: #ffffff; /* White - Used for key text/elements */
+	--color-base: #000000; /* Black - Darkest backgrounds/accents */
+	--color-alert: #f44336; /* Red - Error messages, important alerts */
+	--color-warning: #ff9800; /* Orange - Warnings, cautions */
+	--color-danger: #d32f2f; /* Darker Red - Critical errors, deletion actions */
+	--color-success: #4caf50; /* Green - Success messages, confirmations */
+	--color-info: #2196f3; /* Blue - Information, helpful tips */
 }

@@ -14,7 +14,7 @@ export const MediaCard = ({ data }) => {
 					loading="lazy"
 					title={data.name || data.title}
 				/>
-				<span className="text-white font-medium px-1 bg-success rounded-br absolute top-0 left-0">
+				<span className="text-white font-medium px-1 bg-primary rounded-br absolute top-0 left-0">
 					{data.release_date
 						? String(data.release_date).slice(0, 4)
 						: String(data.first_air_date).slice(0, 4)}

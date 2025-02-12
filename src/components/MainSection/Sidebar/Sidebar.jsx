@@ -46,7 +46,7 @@ export const Sidebar = () => {
 	}, []);
 
 	return (
-		<div className="flex-col gap-4 w-full max-w-[260px] shrink-8 hidden lg:flex text-white">
+		<div className="flex-col gap-4 w-full max-w-[260px] shrink-4 lg:shrink-5 xl:shrink-6 2xl:shrink-8 hidden md:flex text-white">
 			{movieGenres && (
 				<SidebarList title={"Movie Genres"} genres={movieGenres} />
 			)}
