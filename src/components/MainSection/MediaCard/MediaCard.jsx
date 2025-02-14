@@ -14,7 +14,7 @@ export const MediaCard = ({ data }) => {
 			</div>
 			<div className="text-white">
 				<h2
-					className="text-lg font-semibold group-hover:text-secondary transition-colors line-clamp-1"
+					className="text-lg font-semibold group-hover:text-primary transition-colors line-clamp-1"
 					title={data.name || data.title}
 				>
 					{data.name || data.title}

@@ -15,6 +15,22 @@ export const MediaSection = () => {
 	const [data, setData] = useState(null);
 	const [currentMediaIndex, setCurrentMediaIndex] = useState(0);
 
+	const handleNextMedia = () => {
+		if (data && data.results) {
+			setCurrentMediaIndex(
+				(prevIndex) => (prevIndex + 1) % data.results.length
+			);
+		}
+	};
+
+	const handlePreviousMedia = () => {
+		if (data && data.results) {
+			setCurrentMediaIndex((prevIndex) =>
+				prevIndex === 0 ? data.results.length - 1 : prevIndex - 1
+			);
+		}
+	};
+
 	const getData = async () => {
 		try {
 			const response = await fetch(
@@ -40,7 +56,7 @@ export const MediaSection = () => {
 				setCurrentMediaIndex(
 					(prevIndex) => (prevIndex + 1) % data.results.length
 				);
-			}, 10000); // 10 seconds
+			}, 8000); // 8 seconds
 
 			return () => clearInterval(intervalId);
 		}
@@ -51,7 +67,12 @@ export const MediaSection = () => {
 	return (
 		<div className="w-full flex flex-col gap-4">
 			{data && (
-				<FeaturedMedia featuredMedia={featuredMedia} mediaList={data.results} />
+				<FeaturedMedia
+					featuredMedia={featuredMedia}
+					mediaList={data.results}
+					onPrev={handlePreviousMedia}
+					onNext={handleNextMedia}
+				/>
 			)}
 			{data && <Billboard data={data.results} />}
 		</div>

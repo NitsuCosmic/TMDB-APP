@@ -6,14 +6,41 @@
 }
 
 @theme {
-	--color-background: #0d1a26ff; /* Dark Background */
-	--color-surface: #1a2a3cff; /* Card/Surface Background */
-	--color-primary: #3490dcff; /* Primary Blue (buttons, highlights) */
-	--color-secondary: hsl(211, 99%, 50%); /* Lighter Blue for hover/secondary */
-	--color-text-primary: #ffffffff; /* White Text */
-	--color-text-secondary: #a0aec0ff; /* Gray Text */
-	--color-accent: #f6ad55ff; /* Orange/Gold (rating badges) */
-	--color-border: #4a5568ff; /* Subtle border color */
-	--color-overlay: rgba(0, 0, 0, 0.5); /* Dark overlay */
-	--color-red-accent: #e53e3e; /* Red for errors or critical elements */
+	--color-text-primary: hsla(53, 100%, 96%); /* Ivory (Light Background) */
+	--color-text-secondary: hsla(
+		229,
+		11%,
+		72%
+	); /* French Gray (Surface Elements) */
+	--color-primary: hsla(
+		178,
+		80%,
+		43%
+	); /* Fluorescent Cyan (Main Buttons, Highlights) */
+	--color-primary-hover: hsla(
+		178,
+		100%,
+		45%
+	); /* Robin Egg Blue (Hover Effects) */
+	--color-primary-active: hsla(
+		177,
+		100%,
+		31%
+	); /* Persian Green (Active States) */
+	--color-accent: hsla(42, 100%, 70%); /* Sunglow (CTAs, Badges) */
+	--color-border: hsla(229, 10%, 55%); /* Muted Gray (Borders, Dividers) */
+	--color-background: hsla(193, 53%, 3%); /* Dark Overlay for Modals */
+	--color-surface: hsla(188, 27%, 6%); /* French Gray (Surface Elements) */
+	--color-error: hsla(0, 100%, 68%); /* Bittersweet (Errors, Alerts) */
+	--color-smoke: hsla(0, 0%, 91%);
+}
+
+@utility scrollbar-hidden {
+	&::-webkit-scrollbar {
+		display: none;
+	}
+}
+
+@theme {
+	--drop-shadow-text: 0px 2px 4px rgba(0, 0, 0, 1);
 }
